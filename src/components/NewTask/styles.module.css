@@ -23,8 +23,18 @@
   padding: 1rem;
   background-color: var(--blue-dark);
   border: 0;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: var(--gray-100);
+  cursor: pointer;
+  transition: all 0.2s;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.container button:hover {
+  filter: brightness(0.9);
 }
