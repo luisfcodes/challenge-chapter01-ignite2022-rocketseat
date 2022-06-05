@@ -29,7 +29,7 @@
   color: var(--gray-200);
   background-color: var(--gray-400);
   padding: 2px 8px;
-  border-radius: 50%;
+  border-radius: 8px;
   margin-left: 0.5rem;
 }
 
@@ -42,6 +42,7 @@
 
 .contentList {
   margin-top: 1.5rem;
+  width: 100%;
 }
 
 .contentListItem {
@@ -49,10 +50,11 @@
   border-radius: 0.5rem;
   background-color: var(--gray-500);
   margin-top: 0.75rem;
+  color: var(--gray-100);
   
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   gap: 0.5rem;
 }
 
@@ -60,15 +62,25 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+
+  display: flex;
+  align-items: center;
 }
 
 .contentListItem span {
-  text-decoration: line-through;
+  flex-grow: 1;
+  max-width: 90%;
+  word-wrap: break-word;
 }
 
-.contentListItemTrash img {
-  fill: #FFFFFF;
-  color: #FFFFFF;
+.isCompleted {
+  text-decoration: line-through;
+  color: var(--gray-300);
+}
+
+.contentListItem button:last-child:hover {
+  background-color: var(--gray-400);
+  border-radius: 4px;
 }
 
 .emptyContentList {
@@ -86,4 +98,30 @@
 
 .emptyContentList p {
   font-size: 1rem;
+}
+
+.check {
+  color: var(--blue);
+}
+
+.check:hover {
+  color: var(--blue-dark);
+}
+
+.checked {
+  color: var(--purple-dark);
+}
+
+.checked:hover {
+  color: var(--purple);
+}
+
+.trash:hover {
+  color: var(--danger);
+}
+
+@media (max-width: 720px){
+  .container {
+    margin: 3rem 1rem 0;
+  }
 }

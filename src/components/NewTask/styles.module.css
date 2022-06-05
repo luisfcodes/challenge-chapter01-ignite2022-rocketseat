@@ -3,9 +3,8 @@
   justify-content: center;
   align-items: center;
   max-width: 736px;
-  margin: 0 auto;
+  margin: -28px auto 0;
   gap: 0.5rem;
-  margin-top: -28px;
 }
 
 .container input {
@@ -14,7 +13,6 @@
   border: 1px solid var(--gray-700);
   border-radius: 8px;
   padding: 1rem;
-  outline: transparent;
 }
 
 .container button {
@@ -36,5 +34,16 @@
 }
 
 .container button:hover {
-  filter: brightness(0.9);
+  background-color: var(--blue);
+}
+
+.isFocused {
+  outline: 1px solid var(--purple-dark);
+  color: var(--gray-100);
+}
+
+@media (max-width: 720px){
+  .container {
+    margin: -28px 1rem 0;
+  }
 }
